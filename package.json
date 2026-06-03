@@ -14,7 +14,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky"
+    "prepare": "husky",
+    "setup:win": "nvm use $(Get-Content .nvmrc) && npm ci",
+  "setup:mac": "nvm use && npm ci"
   },
   "dependencies": {
     "clsx": "^2.1.1",
