@@ -1,5 +1,6 @@
 import Hero from '@/components/hero/Hero';
 import Timeline from '@/components/timeline/Timeline';
+import Faq from '@/components/faq/Faq';
 export default function Home() {
   return (
     <div className="flex h-screen flex-col items-center">
@@ -11,6 +12,7 @@ export default function Home() {
         hello everyone!
       </div>
       <Timeline />
+      <Faq />
     </div>
   );
 }
