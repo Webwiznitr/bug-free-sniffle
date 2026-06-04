@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import Timeline from '@/components/Timeline';
 export default function Home() {
   return (
     <div className="flex h-screen flex-col items-center">
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="font-canopee bg-secondary text-background text-shadow hack-shadow mx-auto my-10 w-2xl py-4 text-center text-5xl">
         hello everyone!
       </div>
+      <Timeline />
     </div>
   );
 }
