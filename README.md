@@ -38,7 +38,7 @@ This document outlines the required setup and workflow for all contributors to e
    _(This will automatically initialize the Husky Git hooks)_
 
    ```bash
-   npm install
+   npm ci
    ```
 
 4. **Environment Variables**:
