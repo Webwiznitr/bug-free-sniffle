@@ -10,7 +10,7 @@ function Hero() {
     }
   }, []);
   return (
-    <div className="relative flex w-full flex-col bg-[#F4E4B8]">
+    <div className="relative flex w-full flex-col overflow-x-hidden bg-[#F4E4B8]">
       <img
         src="./Union2.png"
         alt=""
