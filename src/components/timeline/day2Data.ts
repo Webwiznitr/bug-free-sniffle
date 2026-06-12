@@ -6,7 +6,7 @@ export const day2Events = [
     tag: '#01',
   },
   {
-    time: 'mon 6:00 PM',
+    time: 'tues 6:00 PM',
     title: 'DOORS OPEN · WELCOME MIXTAPE PACK',
     color: '#2A5266',
     tag: '#01',
