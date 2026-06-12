@@ -1,10 +1,16 @@
-import Hero from '@/components/Hero';
-import Timeline from '@/components/Timeline';
+import Hero from '@/components/hero/Hero';
+import Timeline from '@/components/timeline/Timeline';
+import Faq from '@/components/faq/Faq';
+import Sponsors from '@/components/sponsors/Sponsors';
+import Prizes from '@/components/prizes/Prizes';
 export default function Home() {
   return (
-    <div className="flex h-screen flex-col items-center">
+    <div>
       <Hero />
       <Timeline />
+      <Sponsors />
+      <Faq />
+      <Prizes />
     </div>
   );
 }
