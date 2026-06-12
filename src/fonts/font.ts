@@ -17,3 +17,21 @@ export const editorialNew = localFont({
   display: 'swap',
   fallback: ['serif'],
 });
+
+export const bungee = localFont({
+  src: './Bungee-Regular.ttf',
+  variable: '--font-bungee',
+  weight: '400',
+  style: 'normal',
+  display: 'swap',
+  fallback: ['sans-serif'],
+});
+
+export const pressStart2P = localFont({
+  src: './PressStart2P-Regular.ttf',
+  variable: '--font-press-start',
+  weight: '400',
+  style: 'normal',
+  display: 'swap',
+  fallback: ['monospace'],
+});
