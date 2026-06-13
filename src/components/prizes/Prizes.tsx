@@ -14,16 +14,16 @@ function Prizes() {
           fill
           priority
           sizes="100vw"
-          className="rotate-90 object-cover object-center opacity-60 [-webkit-mask-image:linear-gradient(to_right,transparent,black_30%,black_20%,transparent)] md:scale-110 md:object-cover"
+          className="scale-140 rotate-90 object-cover object-center opacity-60 [-webkit-mask-image:linear-gradient(to_right,transparent,black_50%,black_20%,transparent)] md:scale-125 md:object-cover"
         />
       </div>
       {/* Content */}
       <div className="relative z-10 flex w-full flex-col items-center justify-around">
-        <h2 className="mt-20.25 font-[Canopee] text-[190.56px] leading-none font-normal text-[#2A5266] underline decoration-solid [text-underline-position:from-font]">
+        <h2 className="mt-6 font-[Canopee] text-[44.26px] leading-none font-normal text-[#2A5266] underline decoration-solid [text-shadow:1.25px_1.25px_0_#5A2D1D] [text-underline-position:from-font] md:mt-20.25 md:text-[190.56px] md:[text-shadow:5px_5px_0_#5A2D1D]">
           Prizes
         </h2>
         <Card />
-        <div className="mt-27 grid items-center justify-center gap-20 lg:grid-cols-3">
+        <div className="mt-27 hidden items-center justify-center gap-25 md:grid lg:grid-cols-3 2xl:gap-30">
           <Radio name="OPENERS" char="A" color="#A83320" rotate="355" />
           <Radio name="REMIX" char="B" color="#5E7A3D" rotate="5" />
           <Radio name="ENCORE" char="A" color="#D4A017" rotate="355" />
