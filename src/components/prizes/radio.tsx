@@ -9,7 +9,7 @@ interface RadioProps {
 export default function Radio({ name, char, color, rotate }: RadioProps) {
   return (
     <div
-      className="flex h-45.5 w-80 items-center justify-center rounded-[10.56px] border-[5.28px] border-solid shadow-[7.92px_7.92px_0_0_#000]"
+      className="flex h-45.5 w-80 items-center justify-center rounded-[10.56px] border-[5.28px] border-solid shadow-[7.92px_7.92px_0_0_#000] transition-transform duration-300 hover:z-20 hover:-translate-x-4"
       style={{ backgroundColor: color, transform: `rotate(${rotate}deg)` }}
     >
       <div className="h-[82.4%] w-[90%] rounded-[7.92px] border-[3.96px] border-solid bg-[#F4E4B8]">
