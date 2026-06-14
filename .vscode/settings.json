@@ -26,5 +26,4 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "files.readonlyFromPermissions": true
 }
