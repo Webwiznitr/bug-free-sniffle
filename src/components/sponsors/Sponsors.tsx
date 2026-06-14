@@ -22,204 +22,179 @@ function Sponsors() {
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="relative shrink-0">
                   <Image
-                    src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781075704/sponsors_film_roll_qubtwo.png"
+                    src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294632/film_roll_c_psc3py.png"
                     alt="Film"
                     width={3620.41}
                     height={263.98}
                     className="smd:h-[16vw] mmd:h-[14vw] lmd:h-66 mt-6 h-[18vw] w-full"
                   />
 
-                  <div className="absolute inset-0 flex items-center justify-evenly px-1">
+                  <div className="absolute inset-0 mx-6 mt-5.5 flex items-center justify-evenly px-1">
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
+
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
+                      className="aspect-square w-[12vw] max-w-39.25"
+                    />
+
+                    <Image
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
+                      alt="Logo"
+                      width={150}
+                      height={150}
+                      className="aspect-square w-[12vw] max-w-39.25"
+                    />
+
+                    <Image
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
+                      alt="Logo"
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
                   </div>
@@ -239,204 +214,179 @@ function Sponsors() {
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="relative shrink-0">
                   <Image
-                    src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781075704/sponsors_film_roll_qubtwo.png"
+                    src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294632/film_roll_c_psc3py.png"
                     alt="Film"
                     width={3620.41}
                     height={263.98}
                     className="smd:h-[16vw] mmd:h-[14vw] lmd:h-66 mt-6 h-[18vw] w-full"
                   />
 
-                  <div className="absolute inset-0 flex items-center justify-evenly px-1">
+                  <div className="absolute inset-0 mx-6 mt-5.5 flex items-center justify-evenly px-1">
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
+
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
+                      className="aspect-square w-[12vw] max-w-39.25"
+                    />
+
+                    <Image
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
+                      alt="Logo"
+                      width={150}
+                      height={150}
+                      className="aspect-square w-[12vw] max-w-39.25"
+                    />
+
+                    <Image
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
+                      alt="Logo"
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
                   </div>
@@ -456,204 +406,179 @@ function Sponsors() {
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="relative shrink-0">
                   <Image
-                    src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781075704/sponsors_film_roll_qubtwo.png"
+                    src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294632/film_roll_c_psc3py.png"
                     alt="Film"
                     width={3620.41}
                     height={263.98}
                     className="smd:h-[16vw] mmd:h-[14vw] lmd:h-66 mt-6 h-[18vw] w-full"
                   />
 
-                  <div className="absolute inset-0 flex items-center justify-evenly px-1">
+                  <div className="absolute inset-0 mx-6 mt-5.5 flex items-center justify-evenly px-1">
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
-                      className="aspect-square w-[12vw] max-w-39.25"
-                    />
-                    <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
-                      alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
 
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903189/ho6_logo_red_jh9zwl.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
+
                     <Image
-                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1780903377/ho6_logo_blue_ifai2h.png"
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
                       alt="Logo"
-                      width={156.9}
-                      height={156.9}
+                      width={150}
+                      height={150}
+                      className="aspect-square w-[12vw] max-w-39.25"
+                    />
+
+                    <Image
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294658/ho6_logo_blue_c_c7i445.png"
+                      alt="Logo"
+                      width={150}
+                      height={150}
+                      className="aspect-square w-[12vw] max-w-39.25"
+                    />
+
+                    <Image
+                      src="https://res.cloudinary.com/dijqg8l3m/image/upload/q_auto/f_auto/v1781294645/ho6_logo_red_c_w579xg.png"
+                      alt="Logo"
+                      width={150}
+                      height={150}
                       className="aspect-square w-[12vw] max-w-39.25"
                     />
                   </div>
