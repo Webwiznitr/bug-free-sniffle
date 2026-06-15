@@ -15,7 +15,9 @@ export default function Home() {
       <Prizes />
       <Sponsors />
       <Faq />
-      <MusicPlayer />
+      <div className="mt-89">
+        <MusicPlayer />
+      </div>
     </div>
   );
 }
