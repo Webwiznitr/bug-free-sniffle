@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { canopee, editorialNew } from '@/fonts/font';
+import { canopee, editorialNew, bungee, pressStart2P } from '@/fonts/font';
 import '@/app/globals.css';
 
 const geistSans = Geist({
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${canopee.variable} ${editorialNew.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${canopee.variable} ${editorialNew.variable} ${bungee.variable} ${pressStart2P.variable} antialiased`}
       >
         {children}
       </body>

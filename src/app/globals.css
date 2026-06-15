@@ -24,6 +24,8 @@
   /* Premium Custom Fonts */
   --font-canopee: var(--font-canopee, 'sans-serif');
   --font-editorial: var(--font-editorial-new, 'serif');
+  --font-bungee: var(--font-bungee, 'sans-serif');
+  --font-press-start: var(--font-press-start, 'monospace');
 }
 
 html {
@@ -60,3 +62,18 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@keyframes filmScroll {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.animate-film-scroll {
+  animation: filmScroll 80s linear infinite;
+}
+

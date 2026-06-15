@@ -5,12 +5,14 @@ import Sponsors from '@/components/sponsors/Sponsors';
 import WhatAndStatistics from '@/components/whatAndStatistics/WhatAndStatistics';
 import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
 
+import Prizes from '@/components/prizes/Prizes';
 export default function Home() {
   return (
     <div>
       <Hero />
       <WhatAndStatistics />
       <Timeline />
+      <Prizes />
       <Sponsors />
       <Faq />
       <MusicPlayer />

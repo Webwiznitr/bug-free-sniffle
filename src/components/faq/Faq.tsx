@@ -1,7 +1,12 @@
 import React from 'react';
+import FAQAccordion from './FAQAccordion';
 
 function Faq() {
-  return <div>faq section</div>;
+  return (
+    <div>
+      <FAQAccordion />
+    </div>
+  );
 }
 
 export default Faq;
