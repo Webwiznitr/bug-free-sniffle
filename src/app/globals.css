@@ -67,3 +67,17 @@ body {
 .animate-film-scroll {
   animation: filmScroll 80s linear infinite;
 }
+
+@keyframes filmScrollReverse {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-film-scroll-reverse {
+  animation: filmScrollReverse 80s linear infinite;
+}
