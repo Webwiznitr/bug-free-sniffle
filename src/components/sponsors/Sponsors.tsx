@@ -8,7 +8,7 @@ function Sponsors() {
         alt="Sponsors"
         width={2325}
         height={225}
-        className="smd:mt-16 mmd:mt-20 lmd:mt-24 mt-12 mb-15 h-auto w-full object-cover drop-shadow-[5px_5px_0px_#1A0E05]"
+        className="smd:pt-16 mmd:pt-20 lmd:pt-24 mb-15 h-auto w-full object-cover pt-12 drop-shadow-[5px_5px_0px_#1A0E05]"
       />
 
       <section className="flex flex-col items-center gap-12">
@@ -210,7 +210,7 @@ function Sponsors() {
           </span>
 
           <div className="mt-7 w-full overflow-hidden">
-            <div className="animate-film-scroll flex w-max">
+            <div className="animate-film-scroll-reverse flex w-max">
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="relative shrink-0">
                   <Image
