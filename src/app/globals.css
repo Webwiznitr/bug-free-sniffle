@@ -22,6 +22,7 @@
   --color-secondary: var(--secondary);
 
   /* Premium Custom Fonts */
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   --font-canopee: var(--font-canopee, 'sans-serif');
   --font-editorial: var(--font-editorial-new, 'serif');
   --font-bungee: var(--font-bungee, 'sans-serif');
