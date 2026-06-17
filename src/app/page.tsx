@@ -8,7 +8,7 @@ import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
 import Prizes from '@/components/prizes/Prizes';
 export default function Home() {
   return (
-    <div>
+    <div className="m-0 p-0">
       <Hero />
       <WhatAndStatistics />
       <Timeline />
