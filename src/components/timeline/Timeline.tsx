@@ -179,7 +179,7 @@ export default function Timeline() {
                   </span>
 
                   <span
-                    className="hidden text-[16px] leading-[24px] md:block"
+                    className="hidden text-[17px] leading-[24px] md:block"
                     style={{
                       color: event.color,
                       WebkitTextStroke: `0.27px ${event.color}`,
