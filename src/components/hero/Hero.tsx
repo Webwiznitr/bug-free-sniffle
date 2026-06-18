@@ -1,138 +1,184 @@
 'use client';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { Menu } from 'lucide-react';
 function Hero() {
-  const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      setIsMobile(true);
-    }
-  }, []);
+  const navItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/#about' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Events', href: '/events' },
+  ];
+  const [isHamburg, setIsHamburg] = useState(false);
   return (
-    <div className="relative flex w-full flex-col bg-[#F4E4B8]">
-      <img
-        src="./Union2.png"
-        alt=""
-        className="pointer-events-none absolute z-0 h-full w-full opacity-30"
-      />
+    <div className="relative mx-0 flex w-full flex-col bg-[#F4E4B8] px-0">
+      <div className="pointer-events-none absolute inset-0 z-0 opacity-30">
+        <Image
+          src="/Union2.png"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
       <nav className="border-foreground bg-primary relative z-20 flex h-[70px] w-full shrink-0 items-center justify-between border-b-4 px-6">
-        <img
+        <Image
           src="/hackodisha_white.png"
           alt="Logo"
-          className="cmd:h-8 cmd:left-10 relative left-0 h-6 text-white"
+          width={198}
+          height={29}
+          priority
+          className="ssm:w-[198px] h-auto w-[140px]"
         />
-        <ul className="cmd:flex font-canopee hidden items-center gap-15 text-[28px] tracking-wide uppercase">
-          <li>
-            <a
-              href="#"
-              onClick={() => router.push('/home')}
-              className="text-foreground hover:text-background cursor-pointer transition-colors duration-300 hover:scale-105"
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onClick={() => router.push('/about')}
-              className="text-foreground hover:text-background cursor-pointer transition-colors duration-300 hover:scale-105"
-            >
-              About us
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onClick={() => router.push('/contact')}
-              className="text-foreground hover:text-background cursor-pointer transition-colors duration-300 hover:scale-105"
-            >
-              Contact us
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              onClick={() => router.push('/events')}
-              className="text-foreground hover:text-background cursor-pointer transition-colors duration-300 hover:scale-105"
-            >
-              Events
-            </a>
-          </li>
+        <ul className="font-canopee cmd:flex cmd:gap-4 mmd:gap-8 lmd:gap-15 hidden items-center uppercase">
+          {navItems.map((item) => (
+            <li key={item.name}>
+              <Link
+                href={item.href}
+                className="text-foreground hover:text-background cmd:text-[18px] mmd:text-[22px] lmd:text-[24px] text-[18px] transition-all duration-300 hover:scale-105"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
-        <div className="cmd:shadow-[5px_5px_0px_#000] cmd:h-10 cmd:w-30 relative flex h-8 w-26 cursor-pointer items-center justify-center gap-2 bg-[#2A5266] px-3 py-1 shadow-[4px_4px_0px_#000] transition-all duration-300 hover:scale-110">
-          <img
+        <button
+          onClick={() => {
+            setIsHamburg(!isHamburg);
+          }}
+          className="cmd:hidden text-3xl text-[#E8DDB5]"
+        >
+          <Menu />
+        </button>
+        <a
+          href="https://discord.gg/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cmd:flex cmd:h-10 cmd:px-4 cmd:shadow-[5px_5px_0px_#000] relative hidden h-8 cursor-pointer items-center justify-center gap-2 bg-[#2A5266] px-3 shadow-[4px_4px_0px_#000] transition-all duration-300 hover:scale-110"
+        >
+          <Image
             src="/Discord.png"
             alt="Discord"
-            className="cmd:h-4 h-3 cursor-pointer transition-all duration-300 hover:scale-110"
+            width={20}
+            height={20}
+            className="h-auto w-auto"
           />
-
           <h1 className="cmd:text-2xl font-canopee text-xl tracking-tight text-[#E8DDB5]">
             DISCORD
           </h1>
-        </div>
+        </a>
       </nav>
+      {isHamburg && (
+        <div className="cmd:hidden fixed top-[70px] right-0 z-50 flex h-auto w-[220px] flex-col border-b-4 border-l-4 border-[#1A0E05] bg-[#E3442E] shadow-lg">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={() => setIsHamburg(false)}
+              className="font-canopee border-b border-[#1A0E05] px-6 py-4 text-xl text-[#1A0E05] transition-all hover:bg-[#2A5266] hover:text-[#E8DDB5]"
+            >
+              {item.name}
+            </Link>
+          ))}
+
+          <Link
+            href="#https://discord.gg/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-canopee bg-[#2A5266] px-6 py-4 text-xl text-[#E8DDB5] hover:opacity-90"
+          >
+            DISCORD
+          </Link>
+        </div>
+      )}
 
       {/* #main */}
-      <div className="lmd:flex-row lmd:px-20 relative z-10 flex min-h-[82vh] w-full flex-col items-center justify-between overflow-hidden px-8 py-8">
+      <div className="cmd:px-8 lmd:flex-row lmd:gap-8 lmd:pl-20 lmd:pr-0 lmd:min-h-[82vh] relative z-10 flex w-full flex-col items-center gap-4 pt-2 pb-0">
         {' '}
         {/* Left Column: Info & CTAs */}
-        <div className="lmd:w-[33%] lmd:items-start lmd:text-left flex w-full flex-col items-center gap-2 text-center">
+        <div className="lmd:w-[42%] lmd:items-start lmd:text-left flex w-fit flex-col items-center gap-2 text-center">
           {' '}
-          <img
+          <Image
             src="/hackodisha60logo.png"
-            alt="HACKODISHA"
-            className="cmd:w-[750px] h-auto w-full max-w-[750px] object-contain"
+            alt="HackOdisha 6.0"
+            width={930}
+            height={350}
+            priority
+            className="ssm:max-w-[380px] cmd:max-w-[550px] lmd:max-w-[850px] h-auto w-full max-w-[300px] object-contain"
           />
-          <div className="lmd:justify-start flex h-full w-full max-w-[550px] items-center justify-center gap-4">
-            <img
+          <div className="cmd:gap-4 lmd:justify-start flex w-full items-center justify-center gap-2">
+            {' '}
+            <Image
               src="/60.png"
               alt="6.0"
-              className="cmd:w-[350px] h-auto w-[250px] object-contain md:w-[220px]"
+              width={350}
+              height={500}
+              className="ssm:w-[130px] cmd:w-[220px] lmd:w-[260px] h-auto w-[100px] object-contain"
             />
-            <img
-              src="/blue_date.png"
-              alt="05-06TH SEPTEMBER 2026"
-              className="cmd:w-[350px] h-auto w-[250px] object-contain md:w-[800px]"
-            />
-          </div>
-          <div className="lmd:justify-start mt-2 flex w-100 max-w-[550px] items-center justify-center gap-4">
-            <div className="cmd:w-20 cmd:h-20 relative flex h-12 w-12 flex-shrink-0 cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-110">
-              <img
-                src="/Ellipse_2862.png"
-                alt="Play Outer"
-                className="h-full w-full object-contain"
+            <div className="ssm:w-[220px] ssm:h-[120px] cmd:w-[320px] cmd:h-[160px] lmd:w-[420px] lmd:h-[180px] relative flex h-[100px] w-[180px] flex-col items-center justify-center rounded-[20px] border-[4px] border-dashed border-[#1A0E05] bg-[#2A5266] text-[#E8DDB5]">
+              <Image
+                src={'/Union.png'}
+                width={180}
+                height={100}
+                alt=""
+                className="absolute h-full w-full opacity-50"
               />
-              <img
-                src="/Polygon_1.png"
-                alt="Play Inner"
-                className="ssm:w-6 ssm:h-6 absolute top-[50%] left-[54%] h-4 w-4 -translate-x-1/2 -translate-y-1/2 object-contain"
-              />
+
+              <p className="font-canopee ssm:text-[32px] cmd:text-[36px] lmd:text-[56px] relative flex justify-items-start text-[28px] leading-none md:right-7">
+                05-06TH
+              </p>
+
+              <p className="font-canopee ssm:text-[20px] cmd:text-[24px] lmd:text-[42px] text-[24px] uppercase">
+                September 2026
+              </p>
             </div>
-            <a
+          </div>
+          <div className="lmd:justify-start ssm:gap-4 mt-4 flex w-full items-center justify-center gap-2">
+            {' '}
+            <div className="cmd:w-20 cmd:h-20 relative flex h-12 w-12 shrink-0 cursor-pointer items-center justify-center transition-transform duration-300 hover:scale-110">
+              <div className="cmd:h-16 cmd:w-16 relative h-12 w-12">
+                <Image
+                  src="/Ellipse_2862.png"
+                  alt=""
+                  width={260}
+                  height={100}
+                  className="w-full"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Image src="/Polygon_1.png" alt="" width={20} height={20} />
+              </div>
+            </div>
+            <Link
               href="#"
-              className="ssm:h-12 ssm:px-8 flex h-10 flex-shrink-0 cursor-pointer items-center justify-center rounded-full bg-[#1A0E05] transition-colors transition-transform duration-300 hover:scale-105 hover:bg-[#2A5266]"
+              className="ssm:h-[56px] ssm:px-8 cmd:h-[72px] cmd:px-10 lmd:h-[84px] lmd:px-12 flex h-12 items-center justify-center rounded-full bg-[#1A0E05] px-6 transition-all duration-300 hover:scale-105 hover:bg-[#2A5266]"
             >
-              <img
-                src="/Apply_with_devfolio.png"
-                alt="APPLY WITH DEVFOLIO"
-                className="ssm:h-5 h-12 w-130"
-              />
-            </a>
+              <span className="font-canopee ssm:text-[24px] cmd:text-[32px] lmd:text-[48px] text-[18px] leading-none whitespace-nowrap text-[#E8DDB5]">
+                APPLY WITH DEVFOLIO
+              </span>
+            </Link>
           </div>
         </div>
         {/* Right Column: Retro TV Monitor */}
-        <div className="lmd:w-[60%] relative left-20 z-10 flex h-auto w-full items-center justify-center">
-          <div className="lmd:max-w-[900px] relative top-10 bottom-2 w-full max-w-[850px]">
-            <img
+        <div className="lmd:px-0 ssm:max-w-[440px] cmd:max-w-[760px] lmd:max-w-[1200px] lmd:w-[58%] lmd:mr-0 lmd:ml-auto lmd:self-end relative mx-0 my-0 flex w-full max-w-[550px] flex-col py-0 sm:mx-auto">
+          {/* Desktop TV Monitor (shown on desktop) */}
+          <div className="lmd:block relative hidden w-full">
+            <Image
               src="/tvFrame.png"
-              alt="Monitor Frame"
-              className="pointer-events-none h-full w-full object-contain"
+              alt="TV Frame Desktop"
+              width={1380}
+              height={1200}
+              priority
+              className="block h-auto w-full"
             />
-            <img
+            <Image
               src="/tvScreen.png"
-              alt="Monitor Screen"
-              className="absolute rounded-[1%] object-cover"
+              alt="TV Screen Desktop"
+              width={536}
+              height={425}
+              className="absolute w-full object-cover"
               style={{
                 left: '32.35%',
                 top: '11.72%',
@@ -141,15 +187,43 @@ function Hero() {
               }}
             />
           </div>
+
+          {/* Mobile TV Monitor (shown on mobile/tablet) */}
+          <div className="lmd:hidden relative block w-full">
+            <Image
+              src="/tvfraameMobile.png"
+              alt="TV Frame Mobile"
+              width={400}
+              height={508}
+              priority
+              className="mx-[-4px] h-auto w-full px-0"
+            />
+            <Image
+              src="/tvScreen.png"
+              alt="TV Screen Mobile"
+              width={536}
+              height={425}
+              className="absolute"
+              style={{
+                left: '25%',
+                top: '10%',
+                width: '44%',
+                height: '40%',
+              }}
+            />
+          </div>
         </div>
       </div>
 
       {/* footer tape */}
-      <div className="lmd:-mt-24 relative top-8 z-0 w-full">
-        <img
+      <div className="ssm:-mt-[11vw] cmd:-mt-[8vw] lmd:-mt-[5.3vw] relative z-20 -mt-[13vw] w-full">
+        <Image
           src="/footertape.png"
           alt="Film Tape"
-          className="pointer-events-none relative h-auto w-full"
+          width={1920}
+          height={180}
+          priority
+          className="block h-auto w-full"
         />
       </div>
     </div>
