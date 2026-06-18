@@ -6,7 +6,7 @@ import Image from 'next/image';
 function WhatAndStatistics() {
   return (
     <div
-      className="flex bg-cover bg-center"
+      className="flex min-h-screen bg-cover bg-center"
       style={{
         backgroundImage: `url(${images.WhatAndStatisticsBg})`,
       }}
