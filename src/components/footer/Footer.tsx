@@ -30,14 +30,13 @@ function Footer() {
           src="/Rectangle 3475402.png"
           alt="Footer rectangle"
           width={1920}
-          height={180}
+          height={181}
           className="relative z-0 -mt-[6vw] block h-auto w-full md:-mt-[115px]"
         />
       </div>
 
       {/* Main Content Container (Responsive Grid) */}
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 pt-6 pb-16 sm:px-12 md:grid-cols-2 md:px-24 md:pt-16">
-        {/* Left Section: Branding & CTA */}
         <div className="flex flex-col items-start space-y-6 pt-6">
           <div className="flex items-center gap-4">
             <div className="relative h-[100px] w-[200px] sm:h-[200px] sm:w-[370px]">
