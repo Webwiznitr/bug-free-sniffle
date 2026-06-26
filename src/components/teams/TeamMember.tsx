@@ -13,7 +13,7 @@ interface TeamMember {
 export const teamMember: TeamMember[] = [
   {
     id: 1,
-    name: 'JANE COOPER',
+    name: 'tilak',
     role: 'DESIGN HEAD',
     imageUrl: '/blackdisc.png',
     avatarUrl: '/person.png',
