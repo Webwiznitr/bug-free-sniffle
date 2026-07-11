@@ -10,7 +10,7 @@ type HeroNavbarProps = {
 
 export function HeroNavbar({ onOpenMenu }: HeroNavbarProps) {
   return (
-    <nav className="border-foreground bg-primary relative z-20 flex h-[70px] w-full shrink-0 items-center justify-between border-b-4 px-6">
+    <nav className="border-foreground bg-primary fixed top-0 right-0 left-0 z-50 flex h-[70px] w-full shrink-0 items-center justify-between border-b-4 px-6">
       <Image
         src={heroConfig.assets.navLogo}
         alt="Logo"

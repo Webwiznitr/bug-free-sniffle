@@ -2,27 +2,41 @@ import Statistics from './Statistics';
 import WhatIsHO from './WhatIsHO';
 import { images } from '@/config';
 import Image from 'next/image';
-
+import { timelineConfig } from '@/config';
 function WhatAndStatistics() {
   return (
-    <div
-      className="flex min-h-screen bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${images.WhatAndStatisticsBg})`,
-      }}
-    >
-      <div className="py-0">
+    <div className="relative top-[-32vw] flex sm:top-[-17vw] md:top-[-14vw]">
+      <div className="mt-[3vw] w-3/4 px-[4vw] pt-[7vw] sm:pt-[3vw] md:mt-[5vw] lg:mt-[6vw]">
+        <div className="absolute top-40 left-0 z-[-1] h-full w-full">
+          <Image
+            src={images.background}
+            alt="Background"
+            fill
+            className="object-cover opacity-70"
+          />
+        </div>
         <WhatIsHO />
-        <div className="my-20 h-2 w-[50%] bg-[linear-gradient(90deg,#20160d_0%,#4a3420_15%,#7a5c3d_30%,#a88a64_50%,#cbb28a_70%,#e3d0a6_85%,#f4e4b8_100%)]" />
+        <div className="absolute left-0 my-8 h-2 w-[50vw] bg-[linear-gradient(to_right,#1A0E05_0%,rgba(26,14,5,0)_100%)] md:my-20" />
         <Statistics />
+        <div className="absolute -bottom-3 left-0 z-[-10] w-full md:-bottom-6">
+          <Image
+            src={timelineConfig.bottomTapeSrc}
+            alt="Bottom Tape"
+            width={0}
+            height={0}
+            className="w-[100vw]"
+          />
+        </div>
       </div>
-      <Image
-        src={images.rightImgAbout}
-        height={100}
-        width={400}
-        alt=""
-        className="h-ful ml-auto w-fit"
-      />
+      <div className="relative w-1/4 self-stretch overflow-hidden">
+        <Image
+          src={images.rightImgAbout}
+          alt=""
+          fill
+          sizes="25vw"
+          className="object-cover object-top"
+        />
+      </div>
     </div>
   );
 }

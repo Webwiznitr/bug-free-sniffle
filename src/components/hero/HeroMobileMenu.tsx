@@ -24,32 +24,32 @@ export function HeroMobileMenu({ isOpen, onClose }: HeroMobileMenuProps) {
           />
 
           <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-            className="text-foreground fixed inset-0 z-50 flex h-screen w-screen flex-col bg-[#F4E4B8] md:hidden"
+            initial={{ opacity: 0, scale: 0.985 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.985 }}
+            transition={{ duration: 0.18, ease: 'easeOut' }}
+            className="text-foreground fixed inset-0 z-[60] flex h-screen w-screen flex-col bg-[#F4E4B8] md:hidden"
           >
-            <div className="bg-primary flex h-[70px] w-full shrink-0 items-center justify-between border-b-4 border-[#1A0E05] px-6">
+            <div className="bg-primary flex h-17.5 w-full shrink-0 items-center justify-between border-b-4 border-[#1A0E05] px-6">
               <Image
                 src={heroConfig.assets.navLogo}
                 alt="Logo"
                 width={198}
                 height={29}
                 priority
-                className="ssm:w-[198px] h-auto w-[140px]"
+                className="ssm:w-49.5 h-auto w-35"
               />
 
               <button
                 onClick={onClose}
-                className="relative flex h-11 w-11 items-center justify-center border-4 border-[#1A0E05] bg-[#2A5266] shadow-[3px_3px_0px_#1A0E05] transition-all hover:scale-105 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                className="relative flex h-11 w-11 items-center justify-center border-4 border-[#1A0E05] bg-[#2A5266] shadow-[3px_3px_0px_#1A0E05] transition-all hover:scale-105 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
                 aria-label="Close menu"
               >
                 <X className="h-6 w-6 text-[#E8DDB5]" />
               </button>
             </div>
 
-            <div className="relative flex flex-grow flex-col items-center justify-start gap-6 overflow-y-auto bg-[linear-gradient(rgba(26,14,5,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(26,14,5,0.04)_1px,transparent_1px)] bg-[size:20px_20px] px-8 py-10">
+            <div className="relative flex grow flex-col items-center justify-start gap-6 overflow-y-auto bg-[linear-gradient(rgba(26,14,5,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(26,14,5,0.04)_1px,transparent_1px)] bg-size-[20px_20px] px-8 py-10">
               <div className="pointer-events-none absolute inset-0 z-0 opacity-15">
                 <Image
                   src={heroConfig.assets.pattern}
@@ -67,29 +67,23 @@ export function HeroMobileMenu({ isOpen, onClose }: HeroMobileMenuProps) {
                     ];
 
                   return (
-                    <motion.li
-                      key={item.name}
-                      initial={{ opacity: 0, x: 30 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: idx * 0.05 }}
-                      className="w-full"
-                    >
+                    <li key={item.name} className="w-full">
                       <Link
                         href={item.href}
                         onClick={onClose}
-                        className={`block w-full border-4 border-[#1A0E05] py-3.5 text-center text-3xl tracking-wider uppercase shadow-[5px_5px_0px_#1A0E05] transition-all duration-200 hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[1px_1px_0px_#1A0E05] ${theme.bgClass} ${theme.textClass} ${theme.rotateClass} hover:rotate-0`}
+                        className={`block w-full border-4 border-[#1A0E05] py-3.5 text-center text-3xl tracking-wider uppercase shadow-[5px_5px_0px_#1A0E05] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[1px_1px_0px_#1A0E05] ${theme.bgClass} ${theme.textClass} ${theme.rotateClass} hover:rotate-0`}
                       >
                         {item.name}
                       </Link>
-                    </motion.li>
+                    </li>
                   );
                 })}
               </ul>
 
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: (heroConfig.navItems.length + 1) * 0.05 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.16, ease: 'easeOut' }}
                 className="relative z-10 mt-2 flex w-full justify-center"
               >
                 <a

@@ -1,127 +1,46 @@
-import React from 'react';
 import Image from 'next/image';
-
-interface TeamMember {
-  id: number;
-  name: string;
-  role: string;
-  imageUrl: string;
-  avatarUrl: string;
-  tiltClass: string;
-}
-
-export const teamMember: TeamMember[] = [
-  {
-    id: 1,
-    name: 'tilak',
-    role: 'DESIGN HEAD',
-    imageUrl: '/blackdisc.png',
-    avatarUrl: '/person.png',
-    tiltClass: 'md:-rotate-2 -rotate-1',
-  },
-  {
-    id: 2,
-    name: 'JANE COOPER',
-    role: 'DESIGN HEAD',
-    imageUrl: '/blackdisc.png',
-    avatarUrl: '/person.png',
-    tiltClass: 'md:-rotate-2 -rotate-1',
-  },
-  {
-    id: 3,
-    name: 'JANE COOPER',
-    role: 'DESIGN HEAD',
-    imageUrl: '/blackdisc.png',
-    avatarUrl: '/person.png',
-    tiltClass: 'md:-rotate-2 -rotate-1',
-  },
-  {
-    id: 4,
-    name: 'JANE COOPER',
-    role: 'DESIGN HEAD',
-    imageUrl: '/blackdisc.png',
-    avatarUrl: '/person.png',
-    tiltClass: 'md:-rotate-2 -rotate-1',
-  },
-  {
-    id: 5,
-    name: 'JANE COOPER',
-    role: 'DESIGN HEAD',
-    imageUrl: '/blackdisc.png',
-    avatarUrl: '/person.png',
-    tiltClass: 'md:-rotate-2 -rotate-1',
-  },
-  {
-    id: 6,
-    name: 'JANE COOPER',
-    role: 'DESIGN HEAD',
-    imageUrl: '/blackdisc.png',
-    avatarUrl: '/person.png',
-    tiltClass: 'md:-rotate-2 -rotate-1',
-  },
-  {
-    id: 7,
-    name: 'JANE COOPER',
-    role: 'DESIGN HEAD',
-    imageUrl: '/blackdisc.png',
-    avatarUrl: '/person.png',
-    tiltClass: 'md:-rotate-2 -rotate-1',
-  },
-  {
-    id: 8,
-    name: 'JANE COPPER',
-    role: 'DESIGN HEAD',
-    imageUrl: '/blackdisc.png',
-    avatarUrl: '/person.png',
-    tiltClass: 'md:-rotate-2 -rotate-1',
-  },
-];
+import { teamMember } from '@/config/team';
 
 export default function TeamMembersGrid() {
   return (
-    <div className="mx-auto w-full px-2 py-4 sm:px-4">
-      <div className="grid grid-cols-2 justify-items-center gap-4 md:grid-cols-4 md:gap-10">
+    <div className="mx-[2vw] my-[2rem] px-[8vw] py-[1rem] sm:my-[3rem] lg:my-[5rem] lg:px-[2vw]">
+      <div className="grid grid-cols-2 gap-10 md:gap-10 lg:grid-cols-4 lg:gap-y-10 xl:gap-y-12 2xl:gap-y-24">
         {teamMember.map((m) => (
           <div
             key={m.id}
-            className={`relative flex aspect-[281/316] w-full max-w-[281px] transform flex-col items-center justify-between overflow-hidden border-2 border-black/10 bg-[#E3442E] p-3 text-center text-white drop-shadow-[4px_4px_0px_rgba(0,0,0,0.85)] transition-all duration-300 ease-out hover:z-30 hover:scale-105 hover:rotate-0 sm:p-4 md:drop-shadow-[6px_6px_0px_rgba(0,0,0,0.9)] ${m.tiltClass} `}
+            className={`ssm:w-[32vw] relative w-[34vw] -rotate-4 transform border-black/10 bg-[#E3442E] p-1 pb-0 drop-shadow-[3px_3px_0px_rgba(0,0,0,0.85)] transition-all duration-300 ease-out hover:z-30 hover:scale-105 hover:rotate-0 sm:p-2 sm:pb-0 md:drop-shadow-[4px_4px_0px_rgba(0,0,0,0.9)] lg:w-[18vw] lg:py-4 lg:pb-0`}
           >
+            <div className="absolute inset-0 z-0 overflow-hidden">
+              <div className="ssm:top-[12vw] absolute top-[12.5vw] left-0 flex w-full items-end justify-center lg:top-[6vw]">
+                <Image
+                  src={'/teamdisc.svg'}
+                  alt="Disc Background"
+                  width={500}
+                  height={500}
+                  className="size-[23vw] object-cover lg:size-[16vw]"
+                />
+              </div>
+            </div>
             {/* Render Detail */}
-            <div className="z-10 flex w-full flex-col items-center pt-1 select-none">
-              <h2 className="font-canopee text-2xl leading-none tracking-wide text-[#F4E4B8] uppercase sm:text-3xl md:text-[2.2rem]">
+            <div className="z-10 flex w-full flex-col items-center py-1">
+              <h2
+                className={`font-canopee ${m.size} rotate-4 leading-none tracking-wide text-[#F4E4B8] uppercase`}
+              >
                 {m.name}
               </h2>
-              <p className="mt-0.5 font-sans text-[9px] font-bold tracking-widest text-black/90 uppercase sm:mt-1 sm:text-[11px]">
+              <p className="font-canopee my-1 rotate-4 text-[2.5vw] leading-1 tracking-wide text-black/90 uppercase lg:text-[1vw]">
                 {m.role}
               </p>
             </div>
 
-            <div className="relative mt-2 flex max-h-[70%] w-full flex-grow items-end justify-center">
-              {/* Disc Image */}
-              <div className="absolute inset-0 z-0 flex h-full w-full items-center justify-center p-2">
-                <div className="relative aspect-square h-[150%] w-full">
-                  <Image
-                    src={m.imageUrl}
-                    alt="Disc Background"
-                    fill
-                    sizes="(max-w-868px) 50vw, 25vw"
-                    className="pointer-events-none object-contain select-none"
-                    priority={m.id <= 4}
-                  />
-                </div>
-              </div>
-
-              {/* Avatar Image */}
-              <div className="relative top-0 z-10 h-[150%] w-full">
-                <Image
-                  src={m.avatarUrl}
-                  alt="Avatar"
-                  fill
-                  sizes="(max-w-768px) 50vw, 25vw"
-                  className="pointer-events-none translate-y-4 object-contain object-bottom transition-transform duration-300 select-none group-hover:scale-105"
-                  priority={m.id <= 4}
-                />
-              </div>
+            <div className="relative flex w-full items-end justify-center">
+              <Image
+                src={m.avatarUrl}
+                alt="Avatar"
+                width={500}
+                height={500}
+                className="aspect-square w-[21vw] overflow-hidden object-cover transition-transform duration-300 select-none group-hover:scale-105 lg:w-[16vw]"
+              />
             </div>
           </div>
         ))}

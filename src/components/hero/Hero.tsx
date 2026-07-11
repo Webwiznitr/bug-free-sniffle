@@ -31,7 +31,7 @@ function Hero() {
   }, [isHamburg]);
 
   return (
-    <div className="relative mx-0 mb-10 flex w-full max-w-full flex-col overflow-x-clip bg-[#F4E4B8] px-0">
+    <div className="relative mx-0 flex w-full max-w-full flex-col overflow-x-clip bg-[#F4E4B8] px-0 pt-17.5">
       <div className="pointer-events-none absolute inset-0 z-0 opacity-100">
         <Image
           src={heroConfig.assets.pattern}

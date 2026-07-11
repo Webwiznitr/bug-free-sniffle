@@ -7,10 +7,12 @@ import MusicPlayer from '@/components/MusicPlayer/MusicPlayer';
 import Prizes from '@/components/prizes/Prizes';
 import Footer from '@/components/footer/Footer';
 import Teams from '@/components/teams/Teams';
+import Tape from '@/components/tape/Tape';
 export default function Home() {
   return (
     <div className="m-0 p-0">
       <Hero />
+      <Tape />
       <WhatAndStatistics />
       <Timeline />
       <Prizes />
