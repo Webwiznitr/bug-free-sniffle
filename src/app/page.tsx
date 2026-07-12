@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <div className="m-0 p-0">
       <Hero />
-      <Tape />
       <WhatAndStatistics />
       <Timeline />
       <Prizes />

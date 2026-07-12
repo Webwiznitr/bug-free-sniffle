@@ -111,6 +111,22 @@ export function HeroMainContent() {
           />
         </div>
       </div>
+      <div className="absolute -bottom-[13vw] left-0 z-50 w-full md:-bottom-[6.75vw] lg:-bottom-[6rem] xl:-bottom-[8rem]">
+        <Image
+          src="/footertape.png"
+          alt="Tape"
+          width={1920}
+          height={1080}
+          className="hidden h-full w-full md:block"
+        />
+        <Image
+          src="/mobiletape.svg"
+          alt="Mobile Tape"
+          width={1920}
+          height={1080}
+          className="h-full w-full md:hidden"
+        />
+      </div>
     </div>
   );
 }

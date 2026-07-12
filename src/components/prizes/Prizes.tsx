@@ -4,7 +4,7 @@ import PrizesCard from './Card';
 
 function Prizes() {
   return (
-    <div className="relative top-[-35vw] my-2 sm:top-[-18vw] md:top-[-16vw]">
+    <div className="relative my-2">
       <div className="absolute top-0 left-0 z-[-1] h-full w-full overflow-hidden">
         <Image
           src="/prizegrid.svg"

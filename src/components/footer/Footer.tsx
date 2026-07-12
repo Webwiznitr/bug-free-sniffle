@@ -4,7 +4,7 @@ import { FaDiscord, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#F4E4B8]">
+    <footer className="relative mt-2 w-full">
       {/* Background Image */}
       <div className="pointer-events-none absolute inset-0 z-0 opacity-30">
         <Image
@@ -13,25 +13,6 @@ function Footer() {
           fill
           className="object-cover"
           priority
-        />
-      </div>
-
-      {/* footer tape */}
-      <div className="ssm:-mt-[11vw] cmd:-mt-[8vw] lmd:-mt-[5.3vw] relative z-20 -mt-[13vw] w-full">
-        <Image
-          src="/Group 1321317692.png"
-          alt="Film Tape"
-          width={1920}
-          height={180}
-          priority
-          className="relative z-10 block h-auto w-full"
-        />
-        <Image
-          src="/Rectangle 3475402.png"
-          alt="Footer rectangle"
-          width={1920}
-          height={181}
-          className="relative z-0 -mt-[6vw] block h-auto w-full md:-mt-[115px]"
         />
       </div>
 
