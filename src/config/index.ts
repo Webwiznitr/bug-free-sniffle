@@ -21,28 +21,7 @@ export const heroConfig = {
     { name: 'Contact Us', href: '/contact' },
     { name: 'Events', href: '/events' },
   ] as HeroNavItem[],
-  mobileMenuThemes: [
-    {
-      bgClass: 'bg-[#E3442E]',
-      textClass: 'text-[#E8DDB5]',
-      rotateClass: '-rotate-1',
-    },
-    {
-      bgClass: 'bg-[#2A5266]',
-      textClass: 'text-[#E8DDB5]',
-      rotateClass: 'rotate-1',
-    },
-    {
-      bgClass: 'bg-[#F4E4B8]',
-      textClass: 'text-[#1A0E05]',
-      rotateClass: '-rotate-1',
-    },
-    {
-      bgClass: 'bg-[#E3442E]',
-      textClass: 'text-[#E8DDB5]',
-      rotateClass: 'rotate-1',
-    },
-  ],
+
   social: {
     discordUrl: 'https://discord.gg/',
     discordLabel: 'DISCORD',

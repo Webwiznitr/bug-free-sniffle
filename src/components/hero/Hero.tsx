@@ -6,9 +6,6 @@ import { heroConfig } from '@/config';
 
 import { HeroMainContent } from './HeroMainContent';
 
-import { HeroMobileMenu } from './HeroMobileMenu';
-import { HeroNavbar } from './HeroNavbar';
-
 function Hero() {
   const [isHamburg, setIsHamburg] = useState(false);
 
@@ -41,9 +38,6 @@ function Hero() {
           priority
         />
       </div>
-
-      <HeroNavbar onOpenMenu={() => setIsHamburg(true)} />
-      <HeroMobileMenu isOpen={isHamburg} onClose={() => setIsHamburg(false)} />
       <HeroMainContent />
     </div>
   );
