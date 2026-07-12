@@ -145,7 +145,7 @@ function FaqSection() {
 
   return (
     <div className="relative my-2 w-full" id="faqs">
-      <section className="bg-background] relative w-full overflow-hidden lg:py-20">
+      <section className="bg-background] relative w-full lg:py-20">
         <h1 className="text-center font-[Canopee] text-[16vw] leading-none font-normal text-[#2A5266] underline decoration-solid [text-shadow:1.5px_1.5px_0_#5A2D1D] [text-underline-position:from-font] sm:text-[14vw] md:text-[12vw] lg:[text-shadow:4px_4px_0_#1a0e05]">
           FAQS
         </h1>
@@ -182,22 +182,6 @@ function FaqSection() {
               />
             ) : null
           )}
-        </div>
-        <div>
-          <Image
-            src="/footertape.png"
-            alt="Tape"
-            width={1920}
-            height={1080}
-            className="hidden h-full w-full md:block"
-          />
-          <Image
-            src="/mobiletape.svg"
-            alt="Mobile Tape"
-            width={1920}
-            height={1080}
-            className="h-full w-full md:hidden"
-          />
         </div>
       </section>
     </div>

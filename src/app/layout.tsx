@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { canopee, editorialNew, bungee, pressStart2P } from '@/fonts/font';
+import {
+  canopee,
+  editorialNew,
+  bungee,
+  pressStart2P,
+  bricolageGrotesque,
+  oxanium,
+} from '@/fonts/font';
 import '@/app/globals.css';
 import { Navbar } from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
@@ -107,7 +114,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${canopee.variable} ${editorialNew.variable} ${bungee.variable} ${pressStart2P.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${canopee.variable} ${editorialNew.variable} ${bungee.variable} ${pressStart2P.variable} ${bricolageGrotesque.variable} ${oxanium.variable} antialiased`}
       >
         <Toaster position="top-right" />
         <Navbar />

@@ -1,144 +1,118 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
+
+import {
+  footerAssets,
+  footerLinks,
+  socialLinks,
+  sponsorCTA,
+} from '@/config/footer';
 import { FaDiscord, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
 
 function Footer() {
   return (
     <footer className="relative mt-2 w-full">
-      {/* Background Image */}
-      <div className="pointer-events-none absolute inset-0 z-0 opacity-30">
+      <div className="z-0 h-full w-full">
         <Image
-          src="/Union2.png"
+          src="/footertape.png"
+          alt="Tape"
+          width={1920}
+          height={1080}
+          className="hidden h-full w-full md:block"
+        />
+        <Image
+          src="/mobiletape.svg"
+          alt="Mobile Tape"
+          width={1920}
+          height={1080}
+          className="h-full w-full md:hidden"
+        />
+      </div>
+      {/* Background Image */}
+
+      <div className="pointer-events-none absolute inset-0 top-[4vw] z-0 opacity-20">
+        <Image
+          src="/prizegrid.svg"
           alt="background"
           fill
           className="object-cover"
           priority
         />
       </div>
-
-      {/* Main Content Container (Responsive Grid) */}
-      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 px-6 pt-6 pb-16 sm:px-12 md:grid-cols-2 md:px-24 md:pt-16">
-        <div className="flex flex-col items-start space-y-6 pt-6">
-          <div className="flex items-center gap-4">
-            <div className="relative h-[100px] w-[200px] sm:h-[200px] sm:w-[370px]">
+      <div className="relative z-10 my-[1rem] overflow-hidden text-gray-800 transition-all md:my-[2rem]">
+        <div className="flex flex-col gap-5 px-4 md:px-10 lg:px-16 xl:px-20 2xl:px-36">
+          <div className="mx-auto flex w-full max-w-[1345px] flex-col items-center justify-center gap-10 px-14 md:flex-row md:items-start md:justify-between">
+            {/* Left Section */}
+            <div className="flex w-full max-w-[455px] flex-col gap-y-4 text-center md:gap-y-6 md:text-left">
               <Image
-                src="/hackodisha60logo.png"
-                alt="Logo"
-                fill
-                className="object-contain object-left"
-                priority
+                src={footerAssets.logo}
+                alt="logo"
+                width={500}
+                height={500}
+                className="mx-auto w-[55vw] sm:w-[45vw] md:mx-0 md:w-[40vw] lg:w-[32vw] xl:w-[28vw] 2xl:w-[20vw]"
               />
+              <p className="font-bricolage-grotesque text-[16px] leading-[1.2] font-[700] md:text-[24px] lg:text-[32px]">
+                {sponsorCTA.heading}
+              </p>{' '}
+              <Link
+                href={sponsorCTA.buttonLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-secondary text-background font-bricolage-grotesque hover:bg-secondary mx-auto flex transform-gpu flex-row items-center justify-center border-2 border-black px-[2vw] py-1 text-[16px] font-[700] shadow-[2px_2px_0px_#000] transition-all duration-150 ease-in-out hover:translate-y-[-2px] hover:cursor-pointer hover:shadow-[3px_5px_0px_#000] active:translate-y-[2px] active:scale-[0.98] active:shadow-[2px_3px_0px_#444] md:mx-0 md:text-xl lg:py-2 lg:text-2xl">
+                  {sponsorCTA.buttonText}
+                </button>
+              </Link>
             </div>
-            <div className="relative h-[30px] w-[40px] sm:h-[55px] sm:w-[65px]">
-              <Image
-                src="/60.png"
-                alt="Logo"
-                fill
-                className="object-contain object-left"
-                priority
-              />
+            <div className="w-full max-w-[170px] text-center lg:text-left">
+              <h3 className="font-archivo-black mb-[2vw] text-[18px] font-extrabold md:text-[24px] lg:text-[31px]">
+                Site map
+              </h3>
+              <ul className="font-archivo space-y-2 text-[16px] font-[600] md:space-y-5 md:text-[20px] lg:text-[24px]">
+                {footerLinks.map(({ label, href }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className="hover:text-primary transition-colors duration-300"
+                    >
+                      {label} <span className="ml-2 font-bold">&#8250;</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-
-          <p className="max-w-[500px] text-xl leading-tight font-bold text-[#454545] sm:text-2xl md:text-[30px]">
-            Want to become a sponsor of Hackodisha 5.0 ?
-          </p>
-
-          <div className="relative inline-flex cursor-pointer items-center justify-center rounded-2xl border-2 border-black bg-[#2A5266] px-8 py-4 text-lg font-bold text-[#F4E4B8] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-100 select-none active:translate-x-1 active:translate-y-1 md:px-12 md:py-5 md:text-2xl">
-            Become a sponsor
+          {/* Social Icons */}
+          <div className="relative z-0 mx-auto mt-4 grid max-w-fit grid-cols-4 justify-items-center gap-4 md:gap-[26.57px]">
+            {socialLinks.map(({ src, alt, href, className }, idx) => {
+              if (!src || !alt || !href)
+                return <div key={`social-icons-div-${idx}`}></div>;
+              return (
+                <Link
+                  key={alt}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={src}
+                    alt={alt}
+                    width={48}
+                    height={48}
+                    className={`h-[24px] w-[24px] transition-all md:h-[40px] md:w-[40px] lg:h-[48px] lg:w-[48px] ${className}`}
+                  />
+                </Link>
+              );
+            })}
           </div>
         </div>
-
-        {/* Right Section: Site Map */}
-        <div className="flex w-full flex-col items-start space-y-4 justify-self-start pt-2 md:max-w-[250px] md:items-end md:justify-self-end md:pt-[120px] md:text-right">
-          <h3 className="md: md: -mt-8 mr-22 mb-2 text-2xl font-black tracking-wide md:text-[30px]">
-            Site map
-          </h3>
-          <nav className="md: mt-13 flex w-full flex-col space-y-3 text-lg font-medium md:text-[24px]">
-            <a
-              href="#about"
-              className="group flex items-center justify-between gap-4 transition-colors hover:text-[#d94625]"
-            >
-              About us{' '}
-              <span className="transform transition-transform group-hover:translate-x-1">
-                &gt;
-              </span>
-            </a>
-            <a
-              href="#prizes"
-              className="group flex items-center justify-between gap-4 transition-colors hover:text-[#d94625]"
-            >
-              Prizes{' '}
-              <span className="transform transition-transform group-hover:translate-x-1">
-                &gt;
-              </span>
-            </a>
-            <a
-              href="#contact"
-              className="group flex items-center justify-between gap-4 transition-colors hover:text-[#d94625]"
-            >
-              Contact us{' '}
-              <span className="transform transition-transform group-hover:translate-x-1">
-                &gt;
-              </span>
-            </a>
-            <a
-              href="#sponsors"
-              className="group flex items-center justify-between gap-4 transition-colors hover:text-[#d94625]"
-            >
-              Sponsors{' '}
-              <span className="transform transition-transform group-hover:translate-x-1">
-                &gt;
-              </span>
-            </a>
-            <a
-              href="#faqs"
-              className="group flex items-center justify-between gap-4 transition-colors hover:text-[#d94625]"
-            >
-              FAQs{' '}
-              <span className="transform transition-transform group-hover:translate-x-1">
-                &gt;
-              </span>
-            </a>
-          </nav>
-        </div>
       </div>
-
-      {/* Social Media Bar */}
-      <div className="relative z-10 flex justify-center space-x-6 py-6">
-        <a
-          href="https://discord.gg/"
-          target="_blank"
-          className="rounded-full p-2 text-[#000000] transition-transform hover:scale-110"
-        >
-          <FaDiscord size={25} />
-        </a>
-        <a
-          href="https://instagram.com/"
-          target="_blank"
-          className="rounded-full p-2 text-[#000000] transition-transform hover:scale-110"
-        >
-          <FaInstagram size={25} />
-        </a>
-        <a
-          href="https://facebook.com/"
-          target="_blank"
-          className="rounded-full bg-black p-2 text-[#f4ebd0] transition-transform hover:scale-110"
-        >
-          <FaFacebookF size={22} />
-        </a>
-        <a
-          href="https://twitter.com/"
-          target="_blank"
-          className="rounded-full p-2 text-[#000000] transition-transform hover:scale-110"
-        >
-          <FaTwitter size={25} />
-        </a>
-      </div>
-
-      {/* Copyright Bar */}
-      <div className="relative z-10 w-full bg-[#1c1510] py-3 text-center text-xs font-semibold tracking-wide text-[#f4ebd0] md:text-sm">
-        Hackodisha 6.0 2025. Powered by Webwiz, NIT Rourkela.
+      {/* Footer Bottom Bar */}
+      <div className="font-oxanium relative inset-y-0 bottom-0 z-10 flex w-full flex-col items-center justify-center bg-[#1A0E05] py-2 text-center text-[3vw] font-[600] tracking-wide sm:text-[2.5vw] md:py-4 lg:text-[2vw] xl:text-[1.5vw]">
+        <span className="text-background w-full max-w-[1200px] px-4 md:px-10 lg:px-16 xl:px-20 2xl:px-36">
+          Hackodisha 6.0 2026 Powered by Webwiz, NIT Rourkela
+        </span>
       </div>
     </footer>
   );

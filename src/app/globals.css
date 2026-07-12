@@ -26,6 +26,8 @@
   --font-canopee: var(--font-canopee, 'sans-serif');
   --font-editorial: var(--font-editorial-new, 'serif');
   --font-bungee: var(--font-bungee, 'sans-serif');
+  --font-bricolage-grotesque: var(--font-bricolage-grotesque);
+  --font-oxanium: var(--font-oxanium);
   --font-press-start: var(--font-press-start, 'monospace');
   --font-archivo: var(--font-archivo, 'sans-serif');
 }

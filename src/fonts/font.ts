@@ -1,5 +1,16 @@
 import localFont from 'next/font/local';
-import { Archivo } from 'next/font/google';
+import { Archivo, Bricolage_Grotesque, Oxanium } from 'next/font/google';
+
+export const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-bricolage-grotesque',
+});
+export const oxanium = Oxanium({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-oxanium',
+});
 
 export const archivoFont = Archivo({
   subsets: ['latin'],
