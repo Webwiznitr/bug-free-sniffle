@@ -11,7 +11,7 @@ function Teams() {
         </h1>
         <TeamMembersGrid />
       </main>
-      <div className="w-full">
+      {/* <div className="w-full">
         <Image
           src="/teampixel.svg"
           alt="Red Tape Footer"
@@ -20,7 +20,7 @@ function Teams() {
           priority
           className="h-auto w-full"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

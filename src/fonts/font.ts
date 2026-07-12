@@ -1,4 +1,13 @@
 import localFont from 'next/font/local';
+import { Archivo } from 'next/font/google';
+
+export const archivoFont = Archivo({
+  subsets: ['latin'],
+  variable: '--font-archivo',
+  weight: '400',
+  style: 'normal',
+  display: 'swap',
+});
 
 export const canopee = localFont({
   src: './Canopee.otf',

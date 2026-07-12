@@ -27,6 +27,7 @@
   --font-editorial: var(--font-editorial-new, 'serif');
   --font-bungee: var(--font-bungee, 'sans-serif');
   --font-press-start: var(--font-press-start, 'monospace');
+  --font-archivo: var(--font-archivo, 'sans-serif');
 }
 
 html {

@@ -8,6 +8,7 @@ import Prizes from '@/components/prizes/Prizes';
 import Footer from '@/components/footer/Footer';
 import Teams from '@/components/teams/Teams';
 import Tape from '@/components/tape/Tape';
+import FaqSection from '@/components/faq/Faq';
 export default function Home() {
   return (
     <div className="m-0 p-0">
@@ -17,11 +18,7 @@ export default function Home() {
       <Timeline />
       <Prizes />
       <Teams />
-      <Sponsors />
-      <Faq />
-      <div className="mt-89">
-        <MusicPlayer />
-      </div>
+      <FaqSection />
       <Footer />
     </div>
   );
