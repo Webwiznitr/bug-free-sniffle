@@ -9,7 +9,8 @@ function WhatIsHO() {
         </h1>
       </div>
       <div className="p-1 pr-[5vw]">
-        <p className="font-editorial text-foreground text-[2.5vw] leading-[120%] font-extrabold md:text-[2vw]">
+        {/* Added 'scroll-reveal-text' to target via GSAP */}
+        <p className="scroll-reveal-text font-editorial text-foreground text-[2.5vw] leading-[120%] font-extrabold will-change-transform md:text-[2vw]">
           HackOdisha- a thrilling{' '}
           <span className="text-secondary">36-hour online hackathon</span>{' '}
           organized by{' '}
@@ -18,7 +19,7 @@ function WhatIsHO() {
           impressive turnout of over 1600 participants across India, this
           hackathon promises to be a platform where innovation knows no bounds
         </p>
-        <p className="font-editorial text-foreground mt-4 text-[2.5vw] leading-[120%] font-extrabold md:mt-5 md:text-[2vw]">
+        <p className="scroll-reveal-text font-editorial text-foreground mt-4 text-[2.5vw] leading-[120%] font-extrabold will-change-transform md:mt-5 md:text-[2vw]">
           We celebrate the power of technology and the indomitable spirit of our
           participants. Together, we&apos;re shaping a brighter future through{' '}
           <span className="text-secondary">innovation and collaboration.</span>

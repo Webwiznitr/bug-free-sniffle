@@ -30,8 +30,54 @@
   --font-oxanium: var(--font-oxanium);
   --font-press-start: var(--font-press-start, 'monospace');
   --font-archivo: var(--font-archivo, 'sans-serif');
+
+  /*
+   * TAILWIND V4 ANIMATIONS
+   * Declaring these variables automatically creates classes like 'animate-marquee-right'
+   */
+  --animate-film-scroll: filmScroll 80s linear infinite;
+  --animate-film-scroll-reverse: filmScrollReverse 80s linear infinite;
+  --animate-marquee-right: marquee-right 20s linear infinite;
+  --animate-spin: spin 1s linear infinite;
+
+  @keyframes filmScroll {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes filmScrollReverse {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 
+/* Global Elements */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -43,6 +89,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Custom Standard Classes */
 .hack-shadow {
   box-shadow:
     -3px -4px 0px 0px var(--foreground),
@@ -53,51 +100,19 @@ body {
   width: fit-content;
   height: fit-content;
 }
+
 .text-shadowlight {
   text-shadow: 1px 1px 0px var(--foreground);
 }
+
 .text-shadow {
   text-shadow: 2px 2px 0px var(--foreground);
 }
+
 .text-shadowbold {
   text-shadow: 3px 3px 0px var(--foreground);
 }
+
 .text-shadowextrabold {
   text-shadow: 4px 4px 0px var(--foreground);
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes filmScroll {
-  from {
-    transform: translateX(-50%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
-}
-
-.animate-film-scroll {
-  animation: filmScroll 80s linear infinite;
-}
-
-@keyframes filmScrollReverse {
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-film-scroll-reverse {
-  animation: filmScrollReverse 80s linear infinite;
 }

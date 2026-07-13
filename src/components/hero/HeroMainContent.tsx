@@ -1,8 +1,11 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
 import { heroConfig } from '@/config';
+import { ScrollingTape } from '@/components/scrollingTape/ScrollingTape'; // Adjust this path to match your folder structure
 
 export function HeroMainContent() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -111,21 +114,8 @@ export function HeroMainContent() {
           />
         </div>
       </div>
-      <div className="absolute -bottom-[13vw] left-0 z-50 w-full md:-bottom-[6.75vw] lg:-bottom-[6rem] xl:-bottom-[8rem]">
-        <Image
-          src="/footertape.png"
-          alt="Tape"
-          width={1920}
-          height={1080}
-          className="hidden h-full w-full md:block"
-        />
-        <Image
-          src="/mobiletape.svg"
-          alt="Mobile Tape"
-          width={1920}
-          height={1080}
-          className="h-full w-full md:hidden"
-        />
+      <div className="absolute -bottom-[15.75vw] left-0 z-50 h-[30vw] w-full md:-bottom-[24vw] lg:-bottom-[26.25vw] xl:-bottom-[26.5vw]">
+        <ScrollingTape />
       </div>
     </div>
   );

@@ -8,30 +8,17 @@ import {
   socialLinks,
   sponsorCTA,
 } from '@/config/footer';
-import { FaDiscord, FaInstagram, FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { ScrollingTape } from '../scrollingTape/ScrollingTape';
 
 function Footer() {
   return (
-    <footer className="relative mt-2 w-full">
-      <div className="z-0 h-full w-full">
-        <Image
-          src="/footertape.png"
-          alt="Tape"
-          width={1920}
-          height={1080}
-          className="hidden h-full w-full md:block"
-        />
-        <Image
-          src="/mobiletape.svg"
-          alt="Mobile Tape"
-          width={1920}
-          height={1080}
-          className="h-full w-full md:hidden"
-        />
+    <footer className="relative mt-[50vw] w-full md:mt-[25vw] lg:mt-[10vw] xl:mt-[14vw]">
+      <div className="absolute top-[-34vw] left-0 z-[-1] h-full w-full sm:top-[-30vw] md:-top-[16vw]">
+        <ScrollingTape />
       </div>
       {/* Background Image */}
 
-      <div className="pointer-events-none absolute inset-0 top-[4vw] z-0 opacity-20">
+      <div className="pointer-events-none absolute inset-0 -top-[10vw] z-0 opacity-20">
         <Image
           src="/prizegrid.svg"
           alt="background"
@@ -65,7 +52,7 @@ function Footer() {
                 </button>
               </Link>
             </div>
-            <div className="w-full max-w-[170px] text-center lg:text-left">
+            <div className="w-full max-w-[170px] text-center md:text-left">
               <h3 className="font-archivo-black mb-[2vw] text-[18px] font-extrabold md:text-[24px] lg:text-[31px]">
                 Site map
               </h3>
