@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #f4e4b8;
+  --foreground: #1a0e05;
+  --primary: #e3442e;
+  --secondary: #2a5266;
+}
+
+@theme {
+  /* Custom Breakpoints */
+  --breakpoint-ssm: 480px;
+  --breakpoint-mmd: 860px;
+  --breakpoint-smd: 640px;
+  --breakpoint-ssmd: 520px;
+  --breakpoint-cmd: 750px;
+  --breakpoint-lmd: 1134px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+
+  /* Premium Custom Fonts */
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-canopee: var(--font-canopee, 'sans-serif');
+  --font-editorial: var(--font-editorial-new, 'serif');
+  --font-bungee: var(--font-bungee, 'sans-serif');
+  --font-bricolage-grotesque: var(--font-bricolage-grotesque);
+  --font-oxanium: var(--font-oxanium);
+  --font-press-start: var(--font-press-start, 'monospace');
+  --font-archivo: var(--font-archivo, 'sans-serif');
+
+  /*
+   * TAILWIND V4 ANIMATIONS
+   * Declaring these variables automatically creates classes like 'animate-marquee-right'
+   */
+  --animate-film-scroll: filmScroll 80s linear infinite;
+  --animate-film-scroll-reverse: filmScrollReverse 80s linear infinite;
+  --animate-marquee-right: marquee-right 20s linear infinite;
+  --animate-spin: spin 1s linear infinite;
+
+  @keyframes filmScroll {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes filmScrollReverse {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* Global Elements */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Standard Classes */
+.hack-shadow {
+  box-shadow:
+    -3px -4px 0px 0px var(--foreground),
+    4px 4px 0px 0px var(--foreground);
+}
+
+.fit {
+  width: fit-content;
+  height: fit-content;
+}
+
+.text-shadowlight {
+  text-shadow: 1px 1px 0px var(--foreground);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 0px var(--foreground);
+}
+
+.text-shadowbold {
+  text-shadow: 3px 3px 0px var(--foreground);
+}
+
+.text-shadowextrabold {
+  text-shadow: 4px 4px 0px var(--foreground);
+}
