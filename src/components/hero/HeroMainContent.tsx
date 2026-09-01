@@ -2,13 +2,27 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // 1. Added useEffect
 
 import { heroConfig } from '@/config';
-import { ScrollingTape } from '@/components/scrollingTape/ScrollingTape'; // Adjust this path to match your folder structure
+import { ScrollingTape } from '@/components/scrollingTape/ScrollingTape';
 
 export function HeroMainContent() {
   const [isPlaying, setIsPlaying] = useState(false);
+
+  // 2. Load the Devfolio SDK on mount
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <div className="mt-[9vw] flex flex-col items-center justify-center gap-4 p-2 md:flex-row md:gap-0">
@@ -82,12 +96,15 @@ export function HeroMainContent() {
               </button>
             )}
           </div>
-          <div className="h-full w-full rounded-[151px] bg-[#1A0E05] px-[7vw] py-3 text-center md:px-[2vw]">
-            <Link href={heroConfig.event.applyHref}>
-              <h1 className="font-canopee text-[5.5vw] leading-[100%] font-normal text-[#F4E4B8] md:text-[3.5vw]">
-                {heroConfig.event.applyLabel}
-              </h1>
-            </Link>
+
+          {/* 3. Replaced your custom Apply link with the Devfolio Button */}
+          <div className="flex h-full w-full items-center justify-center px-[7vw] py-3 md:px-[2vw]">
+            <div
+              className="apply-button"
+              data-hackathon-slug="hackodisha-6"
+              data-button-theme="dark"
+              style={{ height: '44px', width: '312px' }}
+            ></div>
           </div>
         </div>
       </div>
