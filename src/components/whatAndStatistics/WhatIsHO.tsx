@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 function WhatIsHO() {
   return (
     <div className="flex w-full flex-col gap-3">

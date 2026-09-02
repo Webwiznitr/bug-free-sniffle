@@ -1,7 +1,7 @@
 import { heroConfig } from '@/config/index';
 import Link from 'next/link';
 import Image from 'next/image';
-import { DISCORD_IMAGE, DISCORD_LINK } from '@/config/navbar';
+import { DISCORD_LINK } from '@/config/navbar';
 const Discord = () => {
   return (
     <Link href={DISCORD_LINK} target="_blank" className="relative z-20 px-2">

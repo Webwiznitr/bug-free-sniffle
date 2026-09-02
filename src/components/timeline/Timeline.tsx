@@ -186,7 +186,9 @@ export default function Timeline() {
             </div>
 
             <div className="font-canopee mt-[3vw] flex w-full items-center justify-center border-2 border-[#1A0E05] bg-[#2A5266] px-[2vw] text-center text-[4vw] font-normal text-[#F4E4B8] shadow-[2px_2px_0px_#1A0E05]">
-              {timelineConfig.dateLabel}
+              {activeDay === 1
+                ? timelineConfig.dateLabelday1
+                : timelineConfig.dateLabelday2}
             </div>
           </div>
 
