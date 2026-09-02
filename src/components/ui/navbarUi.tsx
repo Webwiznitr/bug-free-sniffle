@@ -195,7 +195,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: {
   children: React.ReactNode;
   className?: string;

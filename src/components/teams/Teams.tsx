@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import TeamMembersGrid from './TeamMember';
 
 function Teams() {
