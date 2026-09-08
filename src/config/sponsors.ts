@@ -11,6 +11,11 @@ export interface Sponsor {
    * that exact string has to survive verbatim.
    */
   alt?: string;
+  /**
+   * Skip lazy-loading. Set for Devfolio so the logo resolves even if their
+   * verifier renders the page without scrolling to the sponsors section.
+   */
+  eager?: boolean;
 }
 
 export interface SponsorTier {
@@ -43,6 +48,7 @@ export const sponsorTiers: SponsorTier[] = [
         width: 619,
         height: 129,
         alt: 'DEVFOLIO LOGO',
+        eager: true,
       },
     ],
   },

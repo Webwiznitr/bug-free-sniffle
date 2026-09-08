@@ -3,7 +3,6 @@
 import Image from 'next/image';
 
 import { useState } from 'react';
-import Script from 'next/script';
 
 import { heroConfig } from '@/config';
 import { ScrollingTape } from '@/components/scrollingTape/ScrollingTape';
@@ -84,14 +83,10 @@ export function HeroMainContent() {
             )}
           </div>
 
-          {/* Devfolio "Apply with Devfolio" button. The SDK swaps this div for
-              its own iframe; the fallback link keeps an working Apply route if
-              the SDK is blocked or fails to load. */}
+          {/* Devfolio "Apply with Devfolio" button. The SDK (loaded in the root
+              layout) swaps this div for its own iframe; the fallback link keeps
+              a working Apply route if the SDK is blocked or fails to load. */}
           <div className="flex h-full w-full items-center justify-center px-[7vw] py-3 md:px-[2vw]">
-            <Script
-              src="https://apply.devfolio.co/v2/sdk.js"
-              strategy="afterInteractive"
-            />
             <div
               className="apply-button"
               data-hackathon-slug={heroConfig.event.devfolioSlug}
