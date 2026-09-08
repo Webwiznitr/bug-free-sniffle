@@ -32,6 +32,12 @@ export const heroConfig = {
     monthAndYear: 'November 2026',
     applyHref: '#',
     applyLabel: 'APPLY WITH DEVFOLIO',
+    /**
+     * Drives the "Apply with Devfolio" button. Must match the hackathon slug
+     * Devfolio issued — their dashboard hosts this event at
+     * https://hackodisha-6a.devfolio.co/.
+     */
+    devfolioSlug: 'hackodisha-6a',
   },
   assets: {
     pattern: '/herogrid.svg',
