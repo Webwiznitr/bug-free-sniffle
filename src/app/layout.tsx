@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import {
   canopee,
@@ -14,6 +14,7 @@ import Footer from '@/components/footer/Footer';
 import Script from 'next/script';
 import { Toaster } from 'react-hot-toast';
 import HOC from '@/components/ui/hoc';
+import { siteConfig } from '@/config/site';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -25,61 +26,173 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const ORGANIZATION_ID = `${siteConfig.url}/#organization`;
+
+/**
+ * A @graph lets the Organization be declared once and referenced by @id from
+ * both the WebSite and the Event, instead of being duplicated in each.
+ */
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Event',
-  name: 'HackOdisha 6.0',
-  description:
-    'Largest Student hackathon of Odisha | HackOdisha 6.0 - a thrilling 36-hour online hackathon organized by Webwiz, NIT Rourkela',
-  url: 'https://bug-free-sniffle-mocha.vercel.app',
-  eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
-  startDate: '2026-09-01T09:00:00+05:30',
-  endDate: '2026-09-02T21:00:00+05:30',
-  organizer: {
-    '@type': 'Organization',
-    name: 'Webwiz, NIT Rourkela',
-  },
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': ORGANIZATION_ID,
+      name: siteConfig.organizer,
+      alternateName: 'Webwiz',
+      url: siteConfig.url,
+      email: siteConfig.social.email,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteConfig.url}/icon-512.png`,
+        width: 512,
+        height: 512,
+      },
+      sameAs: [
+        siteConfig.social.twitterUrl,
+        siteConfig.social.instagram,
+        siteConfig.social.discord,
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteConfig.url}/#website`,
+      url: siteConfig.url,
+      name: siteConfig.name,
+      description: siteConfig.description,
+      publisher: { '@id': ORGANIZATION_ID },
+      inLanguage: 'en-IN',
+    },
+    {
+      '@type': 'Event',
+      '@id': `${siteConfig.url}/#event`,
+      name: siteConfig.name,
+      description: siteConfig.description,
+      url: siteConfig.url,
+      // Google requires an image on Event to be eligible for rich results.
+      image: [`${siteConfig.url}${siteConfig.og.image}`],
+      startDate: siteConfig.event.startDate,
+      endDate: siteConfig.event.endDate,
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+      // An online event still needs a `location`; for these it is a VirtualLocation.
+      location: {
+        '@type': 'VirtualLocation',
+        url: siteConfig.url,
+      },
+      organizer: { '@id': ORGANIZATION_ID },
+      // Free entry — update `price` here if registration ever becomes paid.
+      isAccessibleForFree: true,
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        url: siteConfig.url,
+      },
+      inLanguage: 'en-IN',
+    },
+  ],
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://bug-free-sniffle-mocha.vercel.app'),
+  metadataBase: new URL(siteConfig.url),
+  // `default` is used as-is; any future page that sets a title gets the template.
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  applicationName: siteConfig.shortName,
+  authors: [{ name: siteConfig.organizer, url: siteConfig.url }],
+  creator: siteConfig.organizer,
+  publisher: siteConfig.organizer,
+  category: 'technology',
 
-  title: 'HackOdisha 6.0',
-  description:
-    'Largest Student hackathon of Odisha | HackOdisha 6.0 - a thrilling 36-hour online hackathon organized by Webwiz, NIT Rourkela — an event dedicated to fostering community collaboration.',
-  keywords: [
-    'HackOdisha',
-    'HackOdisha 6.0',
-    'HackOdisha 2026',
-    'Hack Odisha',
-    'Hackathon',
-    'NIT Rourkela',
-  ],
+  alternates: {
+    canonical: '/',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+
   openGraph: {
-    title: 'HackOdisha 6.0',
-    description: 'Largest Student hackathon of Odisha | HackOdisha 6.0',
-    url: '/', // Next.js will automatically prepend the metadataBase
-    siteName: 'HackOdisha',
+    type: 'website',
+    url: '/',
+    siteName: siteConfig.shortName,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    locale: 'en_IN',
     images: [
       {
-        url: '/Images/cover.png',
-        width: 1200,
-        height: 630,
-        alt: 'HackOdisha 6.0 Cover Image',
+        url: siteConfig.og.image,
+        // Declared dimensions must match the real file so crawlers reserve the
+        // correct aspect ratio while the image is still loading.
+        width: siteConfig.og.width,
+        height: siteConfig.og.height,
+        alt: siteConfig.og.alt,
+        type: 'image/png',
       },
     ],
-    type: 'website',
   },
+
   twitter: {
     card: 'summary_large_image',
-    title: 'HackOdisha 6.0',
-    description:
-      'HackOdisha 6.0 | Largest Student Run Hackathon of Odisha | Participate and Win Prizes, Goodies and subscriptions.',
-    images: ['/Images/cover.png'],
+    site: siteConfig.social.twitter,
+    creator: siteConfig.social.twitter,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [{ url: siteConfig.og.image, alt: siteConfig.og.alt }],
   },
+
+  /**
+   * Safari only reliably picks up an icon when the link carries an accurate
+   * `type` and `sizes`, so every entry below is declared explicitly and the
+   * multi-resolution .ico is listed first.
+   */
   icons: {
-    icon: '/Images/icon.png',
+    icon: [
+      {
+        url: '/favicon.ico',
+        sizes: '16x16 32x32 48x48 64x64',
+        type: 'image/x-icon',
+      },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    // Opaque 180x180 — iOS composites any transparency to black.
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: ['/favicon.ico'],
   },
+
+  manifest: '/manifest.webmanifest',
+
+  formatDetection: {
+    telephone: false,
+    address: false,
+    email: false,
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  // The design is a fixed light palette; this stops iOS Safari from restyling
+  // form controls and scrollbars for dark mode.
+  colorScheme: 'light',
+  themeColor: siteConfig.themeColor,
 };
 
 export default function RootLayout({
@@ -88,7 +201,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
         <script
           type="application/ld+json"

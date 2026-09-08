@@ -28,8 +28,8 @@ export const heroConfig = {
     mobileDiscordLabel: 'JOIN DISCORD',
   },
   event: {
-    dayRange: '05-06TH',
-    monthAndYear: 'September 2026',
+    dayRange: '31-01TH',
+    monthAndYear: 'November 2026',
     applyHref: '#',
     applyLabel: 'APPLY WITH DEVFOLIO',
   },
