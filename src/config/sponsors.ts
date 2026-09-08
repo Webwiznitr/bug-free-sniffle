@@ -2,6 +2,9 @@ export interface Sponsor {
   name: string;
   logo: string;
   url: string;
+  /** True intrinsic size of the asset, so next/image gets the right ratio. */
+  width: number;
+  height: number;
 }
 
 export interface SponsorTier {
@@ -31,6 +34,8 @@ export const sponsorTiers: SponsorTier[] = [
         name: 'Devfolio',
         logo: '/sponsors/devfolio.svg',
         url: 'https://devfolio.co',
+        width: 619,
+        height: 129,
       },
     ],
   },
@@ -41,7 +46,31 @@ export const sponsorTiers: SponsorTier[] = [
     runtime: '60 MIN',
     shell: '#5e7a3d',
     slots: 4,
-    sponsors: [],
+    sponsors: [
+      {
+        name: 'Regional College of Management',
+        logo: '/sponsors/rcm.png',
+        url: 'https://rcm.ac.in/',
+        width: 2000,
+        height: 820,
+      },
+      {
+        name: 'Fueler',
+        logo: '/sponsors/fueler.svg',
+        url: 'https://fueler.io/',
+        width: 605,
+        height: 162,
+      },
+      {
+        // Supplied as a single-colour white mark; recoloured to the site
+        // foreground so it reads against the cream tape window.
+        name: 'CampusKarma',
+        logo: '/sponsors/campuskarma.svg',
+        url: 'https://campuskarma.in',
+        width: 423,
+        height: 373,
+      },
+    ],
   },
   {
     id: 'silver',

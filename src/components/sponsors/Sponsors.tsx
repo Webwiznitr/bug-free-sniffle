@@ -26,21 +26,25 @@ function Cassette({
       className={`${flip ? 'rotate-3' : '-rotate-3'} flex aspect-[345.84/207.24] w-full flex-col rounded-[0.66em] border-[0.33em] border-black p-[1.32em] drop-shadow-[0.495em_0.495em_0px_black]`}
       style={{ fontSize: CASSETTE_EM, backgroundColor: tier.shell }}
     >
-      <div className="bg-background flex flex-1 flex-col gap-[0.6613em] rounded-[0.495em] border-[0.2475em] border-black px-[0.9075em] pt-[0.9075em] pb-[0.9075em]">
+      {/* min-h-0 all the way down: without it a flex item's automatic minimum
+          size lets a tall logo push past the cassette's fixed aspect ratio. */}
+      <div className="bg-background flex min-h-0 flex-1 flex-col gap-[0.6613em] rounded-[0.495em] border-[0.2475em] border-black px-[0.9075em] pt-[0.9075em] pb-[0.9075em]">
         <div className="text-foreground font-press-start flex h-[1.485em] shrink-0 items-center justify-between border-b-[0.165em] border-dashed border-black/60 pb-[0.495em] text-[0.66em] leading-[1.5]">
           <span>{tier.cassetteLabel}</span>
           <span>{tier.runtime}</span>
         </div>
 
         {/* Tape window — where a sponsor's logo sits. */}
-        <div className="bg-background flex flex-1 items-center justify-center rounded-[0.6875em] border-[0.0625em] border-black p-[0.5em]">
+        <div className="bg-background flex min-h-0 flex-1 items-center justify-center rounded-[0.6875em] border-[0.0625em] border-black p-[0.75em]">
           {sponsor && (
             <Image
               src={sponsor.logo}
               alt={`${sponsor.name} — ${tier.label}`}
-              width={619}
-              height={129}
-              className="max-h-full w-[85%] object-contain"
+              width={sponsor.width}
+              height={sponsor.height}
+              /* Logos range from 1:1 to ~4.8:1, so cap both axes and let
+                 object-contain fit each one rather than sizing on one axis. */
+              className="max-h-full max-w-full object-contain"
             />
           )}
         </div>
