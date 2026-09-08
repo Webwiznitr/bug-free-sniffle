@@ -207,6 +207,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/*
+          Devfolio "Apply with Devfolio" SDK. Deliberately a plain tag rather
+          than next/script: brand-integration verification fetches the page
+          without running JS, so the tag has to be in the server-rendered HTML.
+          `defer` guarantees it runs after .apply-button exists in the DOM.
+        */}
+        <script defer async src="https://apply.devfolio.co/v2/sdk.js" />
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-MLP0HVXXM9"

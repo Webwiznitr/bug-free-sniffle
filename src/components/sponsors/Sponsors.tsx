@@ -40,6 +40,7 @@ function Cassette({
             <Image
               src={sponsor.logo}
               alt={sponsor.alt ?? `${sponsor.name} — ${tier.label}`}
+              loading={sponsor.eager ? 'eager' : 'lazy'}
               width={sponsor.width}
               height={sponsor.height}
               /* Logos range from 1:1 to ~4.8:1, so cap both axes and let
