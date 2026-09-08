@@ -28,7 +28,7 @@ export const heroConfig = {
     mobileDiscordLabel: 'JOIN DISCORD',
   },
   event: {
-    dayRange: '31-01TH',
+    dayRange: '31st-01st', //write in supercript format
     monthAndYear: 'November 2026',
     applyHref: '#',
     applyLabel: 'APPLY WITH DEVFOLIO',
