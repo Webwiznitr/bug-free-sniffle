@@ -2,27 +2,14 @@
 
 import Image from 'next/image';
 
-import { useState, useEffect } from 'react'; // 1. Added useEffect
+import { useState } from 'react';
+import Script from 'next/script';
 
 import { heroConfig } from '@/config';
 import { ScrollingTape } from '@/components/scrollingTape/ScrollingTape';
 
 export function HeroMainContent() {
   const [isPlaying, setIsPlaying] = useState(false);
-
-  // 2. Load the Devfolio SDK on mount
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
 
   return (
     <div className="mt-[9vw] flex flex-col items-center justify-center gap-4 p-2 md:flex-row md:gap-0">
@@ -97,14 +84,29 @@ export function HeroMainContent() {
             )}
           </div>
 
-          {/* 3. Replaced your custom Apply link with the Devfolio Button */}
+          {/* Devfolio "Apply with Devfolio" button. The SDK swaps this div for
+              its own iframe; the fallback link keeps an working Apply route if
+              the SDK is blocked or fails to load. */}
           <div className="flex h-full w-full items-center justify-center px-[7vw] py-3 md:px-[2vw]">
+            <Script
+              src="https://apply.devfolio.co/v2/sdk.js"
+              strategy="afterInteractive"
+            />
             <div
               className="apply-button"
-              data-hackathon-slug="hackodisha-6"
+              data-hackathon-slug={heroConfig.event.devfolioSlug}
               data-button-theme="dark"
               style={{ height: '44px', width: '312px' }}
-            ></div>
+            >
+              <a
+                href={`https://${heroConfig.event.devfolioSlug}.devfolio.co/`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-press-start flex h-full w-full items-center justify-center rounded-md bg-[#3770ff] text-[10px] text-white"
+              >
+                {heroConfig.event.applyLabel}
+              </a>
+            </div>
           </div>
         </div>
       </div>

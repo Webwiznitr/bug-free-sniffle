@@ -5,6 +5,12 @@ export interface Sponsor {
   /** True intrinsic size of the asset, so next/image gets the right ratio. */
   width: number;
   height: number;
+  /**
+   * Overrides the generated alt text. Devfolio's brand-integration verifier
+   * scans the landing page for an <img> whose alt tag is "DEVFOLIO LOGO", so
+   * that exact string has to survive verbatim.
+   */
+  alt?: string;
 }
 
 export interface SponsorTier {
@@ -36,6 +42,7 @@ export const sponsorTiers: SponsorTier[] = [
         url: 'https://devfolio.co',
         width: 619,
         height: 129,
+        alt: 'DEVFOLIO LOGO',
       },
     ],
   },
