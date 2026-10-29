@@ -33,8 +33,8 @@ export const siteConfig = {
   accentColor: '#e3442e',
 
   event: {
-    startDate: '2026-10-31T09:00:00+05:30',
-    endDate: '2026-11-01T21:00:00+05:30',
+    startDate: '2026-12-11T09:00:00+05:30',
+    endDate: '2026-12-13T21:00:00+05:30',
   },
 
   social: {

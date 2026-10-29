@@ -28,8 +28,8 @@ export const heroConfig = {
     mobileDiscordLabel: 'JOIN DISCORD',
   },
   event: {
-    dayRange: '31st-01st', //write in supercript format
-    monthAndYear: 'November 2026',
+    dayRange: '11th-13th', //write in supercript format
+    monthAndYear: 'December 2026',
     applyHref: '#',
     applyLabel: 'APPLY WITH DEVFOLIO',
     /**
@@ -49,8 +49,8 @@ export const heroConfig = {
     playRing: '/Ellipse_2862.png',
     playIcon: '/playbutton.svg',
     pauseIcon: '/pausebutton.svg',
-    tvDesktopFrame: '/tv.svg',
-    tvmobileFrame: '/mobiletv.svg',
+    tvDesktopFrame: '/new date tv.png',
+    tvmobileFrame: '/newdatemobile.png',
     footerTape: '/footertape.png',
   },
 } as const;
