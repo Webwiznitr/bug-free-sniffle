@@ -7,8 +7,8 @@ export type TimelineEvent = {
 
 export const timelineConfig = {
   heading: 'TIMELINE',
-  dateLabelday1: 'OCTOBER 31, 2026',
-  dateLabelday2: 'NOVEMBER 1, 2026',
+  dateLabelday1: 'DECEMBER 11, 2026',
+  dateLabelday2: 'DECEMBER 13, 2026',
   iconSrc: '/musiciconblue.svg',
   leftIconSrc: '/musicicon.svg',
   rightIconSrc: '/musicicon.svg',
